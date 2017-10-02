@@ -1,0 +1,30 @@
+{
+  "name": "node-code-test",
+  "version": "0.0.1",
+  "description": "Test for potential recruits",
+  "repository": "https://github.com/gurkapa/node-code-test",
+  "private": false,
+  "engines": {
+    "node": "6.11.3"
+  },
+  "scripts": {
+    "start": "nf start -w",
+    "test": "mocha test/ --reporter nyan"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.2",
+    "bunyan": "^1.8.12",
+    "config": "^1.26.2",
+    "express": "~4.15.4",
+    "mongoose": "^4.11.14",
+    "request": "^2.81.0"
+  },
+  "author": "Roger Ström",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jshint": "^2.9.5",
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^3.5.0",
+    "mocha-junit-reporter": "^1.13.0"
+  }
+}

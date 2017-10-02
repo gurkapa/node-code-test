@@ -1,0 +1,3 @@
+{
+    "mongodbUri": "override in local.json"
+}
