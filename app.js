@@ -7,7 +7,8 @@ var mongoose = require('mongoose');
 var config = require('config');
 
 var mongodbUri = process.env.MONGODB_URI || config.get('mongodbUri')
-mongoose.connect(mongodbUri, {"keepAlive": true})
+mongoose.Promise = global.Promise;
+mongoose.connect(mongodbUri, {keepAlive: true, useMongoClient: true, promiseLibrary: global.Promise})
   .then(() => {
     log.info('Connected to MongoDB on uri:', mongodbUri);
   }, err => {
